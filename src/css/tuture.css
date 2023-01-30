@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+h1,
+h2,
+.sign-up,
+.sign-in,
+.mobile-screen-bottom-bar,
+.default-screen-button,
+.habits-screen-button, #logoSite, #inscription {
+    font-family: 'Poppins';
+}
+h1 {
+    text-align: center;
+}
+
+.prototype-content{
+    position : absolute;
+    border-radius: 0px;
+    top : 0px;
+}
+.main-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+}
+.mobile-frame {
+    position: absolute;
+    width: 300px;
+    left: calc(50% - 150px);
+    height: 580px;
+    top: calc(55% - 300px);
+    background: #333;
+    border-radius: 50px;
+}
+.mobile-screen {
+    position: absolute;
+    width: 286px;
+    left: 7px;
+    height: 566px;
+    top: 7px;
+    background-color: #0a50a1;
+    background-image: linear-gradient(19deg, #063d65 0%, #45b2a6 100%);
+    border-radius: 45px;
+}
+.mobile-screen-top-block {
+    position: absolute;
+    background: #333;
+    height: 20px;
+    width: 150px;
+    top: 0;
+    left: calc(50% - 75px);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.mobile-screen-bottom-bar {
+    position: absolute;
+    background: black;
+    height: 5px;
+    width: 100px;
+    bottom: 10px;
+    left: calc(50% - 50px);
+    border-radius: 15px;
+}
+
+h2 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 180px;
+}
+
+#inscription{
+    position: absolute;
+    height: 30px;
+    left: calc(50% - 130px);
+    text-align: center;
+    line-height: 25px;
+    visibility: collapse;
+
+}
+
+.sign-in,
+.sign-up {
+    position: absolute;
+    background: white;
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    left: calc(50% - 50px);
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+.sign-in {
+    bottom: 240px;
+}
+.sign-up {
+    bottom: 200px;
+}
+.default-screen-button,
+.habits-screen-button {
+    position: absolute;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    width: 150px;
+    top: 100px;
+    left: calc(50% - 160px);
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+.default-screen-button {
+    left: calc(50% - 160px);
+}
+.habits-screen-button {
+    left: calc(50% + 10px);
+}
+.sign-in,
+.sign-up,
+.default-screen-button:hover,
+.habits-screen-button:hover {
+    cursor: pointer;
+}
+.mobile-frame,
+.default-screen-button,
+.habits-screen-button{
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logoSite{
+    position : absolute;
+    left : calc(50% - 50px);
+    top : 85px;
+    resize: block;
+}

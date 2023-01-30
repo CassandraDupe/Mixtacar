@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mixtacar</title>
+        <meta name="keywords" content="covoiturage, étudiant, Tarn Sud">
+        <meta name="description" content="Application de coivoiturage par des étudiants pour des étudiants">
+        <link rel="shortcut icon" type="images/x-icon" href="../images/logoPTUT.ico">
+        <link media="all" href="../css/tuture.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    <div class="main-container">
+        <div class="prototype-content">
+            <h1>Prototype</h1>
+        </div>
+
+        <div class="mobile-frame">
+            <div class="mobile-screen">
+                <div class="mobile-screen-top-block">
+                    <img id="logoSite" src="../images/logoPTUT.ico" height="100" width="100">
+                </div>
+                <div class="mobile-screen-bottom-bar"></div>
+
+                <div id="start-screen">
+                    <h2>
+                        <span id="mixt" class="fa fa-users"></span>
+                        Mixtacar
+                    </h2>
+                    <div id="ancien" class="sign-in">Sign In</div>
+                    <div id="inscription">
+                        <form>
+                            <div>
+                                <label for="mail">Entrez votre mail universitaire</label>
+                                <br><input type="email" id="mail" name="email" placeholder="monadresse@etud.univ-mail.com" required>
+                            </div>
+                            <div>
+                                <label for="mdp">Entrez votre mot de passe</label>
+                                <br><input type="password" id="mdp" name="mdp" placeholder="mot de passe" required>
+                            </div>
+                            <div>
+                                <label for="mdpConf">Veuillez confirmer votre mot de passe</label>
+                                <br><input type="password" id="mdpConf" name="mdp" placeholder="mot de passe" required>
+                            </div>
+                            <div>
+                                <button type="submit">Connexion</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="nouveau" class="sign-up">Sign Up</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="../js/covoit.js"></script>
+    </body>
+</html>
