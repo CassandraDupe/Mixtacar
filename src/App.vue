@@ -11,40 +11,42 @@ import { RouterLink, RouterView } from "vue-router";
         <!--  un clic sur l'icone cache/affiche la zone de menu de gauche -->
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       </template>
-      <!-- le titre de la barre de navigation -->
-      <v-app-bar-title>Mixtacar</v-app-bar-title>
-      <!-- les boutons de la barre de navigation-->
 
       <template v-slot:append>
-        <RouterLink to="/messages">Librairie</RouterLink>
+        <!-- <RouterLink to="/messages">Librairie</RouterLink> -->
         <v-btn id="menu-droite"> Menu </v-btn>
         <v-menu activator="#menu-droite">
           <!-- le menu s'affichera qd l'élément d'id 'menu-droite' ici 'v-btn' sera activé-->
           <v-list>
             <v-list-item>
-              <v-list-item-title
-                ><RouterLink to="/messages"
-                  >Messages</RouterLink
-                ></v-list-item-title
-              > </v-list-item
-            ><v-list-item
-              ><v-list-item-title
-                ><RouterLink to="/profil">Profil</RouterLink></v-list-item-title
-              >
+              <v-list-item-title>
+                <RouterLink to="/home">Home</RouterLink>
+              </v-list-item-title>
             </v-list-item>
             <v-list-item>
-              <v-list-item-title
-                ><RouterLink to="/personnes_sur_le_trottoir"
-                  >Personnes sur le trottoir</RouterLink
-                ></v-list-item-title
-              >
+              <v-list-item-title>
+                <RouterLink to="/vos_trajets">Vos trajets</RouterLink>
+              </v-list-item-title>
             </v-list-item>
             <v-list-item>
-              <v-list-item-title
-                ><RouterLink to="/deconnexion"
-                  >Deconnexion</RouterLink
-                ></v-list-item-title
-              >
+              <v-list-item-title>
+                <RouterLink to="/messages">Messages</RouterLink>
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>
+                <RouterLink to="/profil">Profil</RouterLink>
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>
+                <RouterLink to="/personnes_sur_le_trottoir">Personnes sur le trottoir</RouterLink>
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>
+                <RouterLink to="/deconnexion">Deconnexion</RouterLink>
+              </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>

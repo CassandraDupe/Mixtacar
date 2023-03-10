@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Personnes_sur_le_trottoir from "../views/Personnes_sur_le_trottoir.vue";
-import Vos_trajets from "../views/Vos_trajets.vue";
-import Messages from "../views/Messages.vue";
-import Profil from "../views/Profil.vue";
+import personnes_sur_le_trottoir from "../views/personnes_sur_le_trottoirView.vue";
+import vos_trajets from "../views/vos_trajetsView.vue";
+import messages from "../views/messagesView.vue";
+import profil from "../views/profilView.vue";
 
 // === définition des routes de l'application
 // --- principalement les items du menu
@@ -14,24 +14,34 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: "/",
+      name: "home",
+      component: () => import('../views/homeView.vue')
+    },
+    {
       path: "/vos_trajets",
-      name: "Vos trajets",
-      component: Vos_trajets
+      name: "vos trajets",
+      component: () => import('../views/vos_trajetsView.vue')
     },
     {
       path: "/messages",
-      name: "Messages",
-      component: Messages
+      name: "messages",
+      component: () => import('../views/messagesView.vue')
     },
     {
       path: "/profil",
-      name: "Profil",
-      component: Profil
+      name: "profil",
+      component: () => import('../views/profilView.vue')
     },
     {
-      path: "/Personnes_sur_le_trottoir",
-      name: "Personnes sur le trottoir",
-      component: Personnes_sur_le_trottoir
+      path: "/personnes_sur_le_trottoir",
+      name: "personnes sur le trottoir",
+      component: () => import('../views/personnes_sur_le_trottoirView.vue')
+    },
+    {
+      path: "/deconnexion",
+      name: "deconnexion",
+      component: () => import('../views/deconnexionView.vue')
     }
   ]
 });
