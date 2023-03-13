@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import personnes_sur_le_trottoir from "../views/personnes_sur_le_trottoirView.vue";
-import vos_trajets from "../views/vos_trajetsView.vue";
+import personnes_sur_le_trottoir from "../views/personnesSurLeTrottoirView.vue";
+import vos_trajets from "../views/vosTrajetsLieuxDepArView.vue";
 import messages from "../views/messagesView.vue";
 import profil from "../views/profilView.vue";
 
@@ -21,7 +21,7 @@ const router = createRouter({
     {
       path: "/vos_trajets",
       name: "vos trajets",
-      component: () => import('../views/vos_trajetsView.vue')
+      component: () => import('../views/vosTrajetsLieuxDepArView.vue')
     },
     {
       path: "/messages",
@@ -36,7 +36,7 @@ const router = createRouter({
     {
       path: "/personnes_sur_le_trottoir",
       name: "personnes sur le trottoir",
-      component: () => import('../views/personnes_sur_le_trottoirView.vue')
+      component: () => import('../views/personnesSurLeTrottoirView.vue')
     },
     {
       path: "/deconnexion",
