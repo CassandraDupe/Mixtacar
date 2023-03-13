@@ -19,13 +19,14 @@
 
   <br>
 
-  <v-btn class="milieu">
+  <v-btn>
     Besoin piéton
   </v-btn>
 
+
   <br><br>
 
-  <v-btn class="milieu">
+  <v-btn value="lien vers proposerTrajetLieuxDepAr" onclick="self.location.href='./proposerTrajetLieuxDepAr'">
     Proposition trajet
   </v-btn>
 </template>

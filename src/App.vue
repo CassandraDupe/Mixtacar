@@ -20,12 +20,12 @@ import { RouterLink, RouterView } from "vue-router";
           <v-list>
             <v-list-item>
               <v-list-item-title>
-                <RouterLink to="/home">Home</RouterLink>
+                <RouterLink to="/">Home</RouterLink>
               </v-list-item-title>
             </v-list-item>
             <v-list-item>
               <v-list-item-title>
-                <RouterLink to="/vos_trajets">Vos trajets</RouterLink>
+                <RouterLink to="/vosTrajets">Vos trajets</RouterLink>
               </v-list-item-title>
             </v-list-item>
             <v-list-item>
@@ -40,7 +40,7 @@ import { RouterLink, RouterView } from "vue-router";
             </v-list-item>
             <v-list-item>
               <v-list-item-title>
-                <RouterLink to="/personnes_sur_le_trottoir">Personnes sur le trottoir</RouterLink>
+                <RouterLink to="/personnesSurLeTrottoir">Personnes sur le trottoir</RouterLink>
               </v-list-item-title>
             </v-list-item>
             <v-list-item>

@@ -1,8 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import personnes_sur_le_trottoir from "../views/personnesSurLeTrottoirView.vue";
-import vos_trajets from "../views/vosTrajetsLieuxDepArView.vue";
+import vosTrajets from "../views/vosTrajetsView.vue";
 import messages from "../views/messagesView.vue";
 import profil from "../views/profilView.vue";
+import deconnexion from "../views/deconnexionView.vue";
+import proposerTrajetLieuxDepArView from "../views/proposerTrajetLieuxDepArView.vue";
+import proposerTrajetItineraireView from "../views/proposerTrajetItineraireView.vue";
+
 
 // === définition des routes de l'application
 // --- principalement les items du menu
@@ -19,9 +23,9 @@ const router = createRouter({
       component: () => import('../views/homeView.vue')
     },
     {
-      path: "/vos_trajets",
-      name: "vos trajets",
-      component: () => import('../views/vosTrajetsLieuxDepArView.vue')
+      path: "/vosTrajets",
+      name: "Vos trajets",
+      component: () => import('../views/vosTrajetsView.vue')
     },
     {
       path: "/messages",
@@ -34,7 +38,7 @@ const router = createRouter({
       component: () => import('../views/profilView.vue')
     },
     {
-      path: "/personnes_sur_le_trottoir",
+      path: "/personnesSurLeTrottoirView",
       name: "personnes sur le trottoir",
       component: () => import('../views/personnesSurLeTrottoirView.vue')
     },
@@ -42,6 +46,16 @@ const router = createRouter({
       path: "/deconnexion",
       name: "deconnexion",
       component: () => import('../views/deconnexionView.vue')
+    },
+    {
+      path: "/proposerTrajetLieuxDepAr",
+      name: "Proposer trajet - Lieux départ et arrivée",
+      component: () => import('../views/proposerTrajetLieuxDepArView.vue')
+    },
+    {
+      path: "/proposerTrajetItineraire",
+      name: "Proposer trajet - Itinéraire",
+      component: () => import('../views/proposerTrajetItineraireView.vue')
     }
   ]
 });

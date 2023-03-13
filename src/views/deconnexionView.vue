@@ -12,5 +12,4 @@
   </style>
   
   <script setup>
-  // commentaire inutile jjj
   </script>

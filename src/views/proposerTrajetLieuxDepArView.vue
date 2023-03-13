@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>This is "Vos trajets - lieux depart et arrivé" page</h1>
+    <h1>This is "Poposer trajet - lieux depart et arrivé" page</h1>
   </div>
   <div id="form">
     <v-sheet width="300" class="mx-auto">
@@ -10,7 +10,7 @@
 
         <v-text-field v-model="lieuArrivee" type="text" label="Lieu d'arrivée :"></v-text-field>
 
-        <v-btn type="submit" block class="mt-2">Suivant</v-btn>
+        <v-btn type="submit" block class="mt-2" value="lien vers vosTrajetsItineraire" onclick="self.location.href='./proposerTrajetItineraire'">Suivant</v-btn>
       </v-form>
     </v-sheet>
   </div>
@@ -21,5 +21,6 @@
 </style>
 
 <script setup>
-import vosTrajetsLieuxDepArComp from "../components/vosTrajetsLieuxDepArComp.vue"
+import proposerTrajetLieuxDepArComp from "../components/proposerTrajetLieuxDepArComp.vue"
+import proposerTrajetItineraireView from "./proposerTrajetItineraireView.vue";
 </script>
