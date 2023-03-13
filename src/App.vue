@@ -55,10 +55,8 @@ import { RouterLink, RouterView } from "vue-router";
 
     <!--  la zone d'affichage du contenu de l'application -->
     <v-main>
-      <v-container fluid>
         <!-- les "composant view" s'afficheront ici -->
         <RouterView />
-      </v-container>
     </v-main>
   </v-layout>
 </template>
