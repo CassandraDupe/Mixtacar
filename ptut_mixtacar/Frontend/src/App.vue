@@ -7,14 +7,12 @@ import { RouterLink, RouterView } from "vue-router";
     <!--  la barre de navigation en haut -->
     <v-app-bar color="primary" density="compact">
       <!-- mettre l'icone dans le 'slot prepend' de 'v-app-bar' soit au début à gauche -->
-      <template v-slot:prepend>
-        <!--  un clic sur l'icone cache/affiche la zone de menu de gauche -->
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      </template>
 
       <template v-slot:append>
-        <!-- <RouterLink to="/messages">Librairie</RouterLink> -->
-        <v-btn id="menu-droite"> Menu </v-btn>
+        <v-avatar> <img src="./image/logoMixtacar.png" rounded="0" alt="logo" /> </v-avatar>
+        <p> NomUtilisateur </p>
+        <v-avatar> <img src="./image/avatar5.png" alt="avatar" /> </v-avatar>
+        <v-btn id="menu-droite"> <img src="./image/flecheBas.png" alt="Menu" /> </v-btn>
         <v-menu activator="#menu-droite">
           <!-- le menu s'affichera qd l'élément d'id 'menu-droite' ici 'v-btn' sera activé-->
           <v-list>
