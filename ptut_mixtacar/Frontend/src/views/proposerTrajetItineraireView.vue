@@ -22,10 +22,14 @@
       </v-col> <!-- colonne -->
     </v-row>
   </v-container>
+  <v-container>
+    <v-btn type="submit" block class="mt-2" value="lien vers vosTrajetsDateHeure" onclick="self.location.href='./proposerTrajetDateHeure'">Suivant</v-btn> 
+  </v-container>
 </template>
   
 <style scoped></style>
   
 <script setup>
 import proposerTrajetItineraireComp from "../components/proposerTrajetItineraireComp.vue";
+import proposerTrajetDateHeureView from "./proposerTrajetDateHeureView.vue";
 </script>

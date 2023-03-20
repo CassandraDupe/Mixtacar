@@ -6,6 +6,8 @@ import profil from "../views/profilView.vue";
 import deconnexion from "../views/deconnexionView.vue";
 import proposerTrajetLieuxDepArView from "../views/proposerTrajetLieuxDepArView.vue";
 import proposerTrajetItineraireView from "../views/proposerTrajetItineraireView.vue";
+import proposerTrajetDateHeureView from "../views/proposerTrajetDateHeureView.vue";
+import proposerTrajetNbPlaceResDir from "../views/proposerTrajetNbPlaceResDirView.vue";
 
 
 // === définition des routes de l'application
@@ -56,6 +58,21 @@ const router = createRouter({
       path: "/proposerTrajetItineraire",
       name: "Proposer trajet - Itinéraire",
       component: () => import('../views/proposerTrajetItineraireView.vue')
+    },
+    {
+      path: "/proposerTrajetDateHeure",
+      name: "Proposer trajet - Date et Heure",
+      component: () => import('../views/proposerTrajetDateHeureView.vue')
+    },
+    {
+      path: "/proposerTrajetNbPlaceResDir",
+      name: "Proposer un Trajet - Nombre de Places et Reservation Directe",
+      component: () => import('../views/proposerTrajetNbPlaceResDirView.vue')
+    },
+    {
+      path: "/proposerTrajetRetour",
+      name: "Proposer un Trajet -Retour",
+      component: () => import('../views/proposerTrajetRetourView.vue')
     }
   ]
 });
