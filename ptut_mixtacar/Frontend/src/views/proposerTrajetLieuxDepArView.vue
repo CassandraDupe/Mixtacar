@@ -10,7 +10,7 @@
 
         <v-text-field v-model="lieuArrivee" type="text" label="Lieu d'arrivée :"></v-text-field>
 
-        <v-btn type="submit" block class="mt-2" value="lien vers vosTrajetsItineraire" onclick="self.location.href='./proposerTrajetItineraire'">Suivant</v-btn>
+        <v-btn type="submit" block class="mt-2" value="lien vers vosTrajetsItineraire" onclick="self.location.href='./proposerTrajetItineraire'">Suivant</v-btn> 
       </v-form>
     </v-sheet>
   </div>
