@@ -23,7 +23,7 @@
       <tbody>
         <tr v-for="item in trajets" :key="trajets.id">
           <td>{{ item.depart }}</td>
-          <td>{{ item.arrivee }}</td>
+          <td>{{ item.arrivee }}</td> 
           <td>{{ item.date }}</td>
           <td>{{ item.heure }}</td>
         </tr>
