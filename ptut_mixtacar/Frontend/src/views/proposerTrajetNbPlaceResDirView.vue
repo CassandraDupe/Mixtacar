@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <h1>This is the "Proposer un Trajet - Nombre de Places et Reservation Directe" page</h1>
-    </div>
+    <p class="pt-10"> </p>
     <v-container>
         <h1> Combien de sièges? </h1>
         <br>
         <v-form fast-fail @submit.prevent>
-            <v-text-field v-model="numberValue" hide-details single-linetype="number"> 3 </v-text-field>
+            <v-text-field v-model="numberValue" hide-details single-linetype="number"> </v-text-field>
         </v-form>
     </v-container>
     <v-container fluid>

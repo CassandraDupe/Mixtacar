@@ -1,7 +1,5 @@
 <template>
-    <div>
-      <h1>This is the "Proposer trajet retour" page</h1>
-    </div>
+    <p class="pt-10"> </p>
     <v-container fluid>
         <h1> Souhaitez vous publier le trajet retour maintenant? </h1>
         <br>

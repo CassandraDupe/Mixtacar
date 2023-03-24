@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>This is the "Poposer trajet - date et heure" page</h1>
-  </div>
+  <p class="pt-10"> </p>
   <v-container>
     <h1> Quel date et quelle heure? </h1>
     <br>

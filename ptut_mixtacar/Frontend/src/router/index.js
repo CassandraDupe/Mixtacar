@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import personnes_sur_le_trottoir from "../views/personnesSurLeTrottoirView.vue";
+import personnesSurLeTrottoirView from "../views/personnesSurLeTrottoirView.vue";
 import vosTrajets from "../views/vosTrajetsView.vue";
 import messages from "../views/messagesView.vue";
 import profil from "../views/profilView.vue";

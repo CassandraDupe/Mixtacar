@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>This is the "Vos trajets" page</h1>
-  </div>
+  <p class="pt-10"> Voici vos futurs trajets </p>
   <v-container>
     <v-table>
       <thead>
