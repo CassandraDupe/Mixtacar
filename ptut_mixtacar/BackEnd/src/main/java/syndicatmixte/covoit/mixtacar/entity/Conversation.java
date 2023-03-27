@@ -6,8 +6,14 @@ import jakarta.persistence.*;
 public class Conversation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_conversation")
+    @Column(name = "id_conversation", insertable=false, updatable=false)
     private Integer idConversation;
+    @ManyToOne
+    @JoinColumn(name = "id_conversation", referencedColumnName = "id_messagerie", nullable = false)
+    private Messagerie messagerieByIpp;
+    @ManyToOne
+    @JoinColumn(name = "id_conversation", referencedColumnName = "id_message", nullable = false)
+    private Message messageByIpp;
     @Basic
     @Column(name = "id_message")
     private Integer idMessage;

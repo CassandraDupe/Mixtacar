@@ -1,4 +1,6 @@
-INSERT INTO utilisateur VALUES(0, 'DUPE','Cassandra','cassandra.dupe@etud.univ-jfc.fr','je@meconnecte');
+-- Demander comment faire pour générer automatiquement la
+-- valeur de la primary key
+
 INSERT INTO utilisateur VALUES(1, 'AUBER','Coline','coline.auber@etud.univ-jfc.fr','Ratchoum!');
 INSERT INTO utilisateur VALUES(2, 'FERON','Mélanie','melanie.feron@etud.univ-jfc.fr','Oupsi@45?');
 

@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Preference {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "identif")
+    @Column(name = "identif", insertable=false, updatable=false)
     private Integer identif;
     @Basic
     @Column(name = "nom")
@@ -14,6 +14,9 @@ public class Preference {
     @Basic
     @Column(name = "etat")
     private Boolean etat;
+    @ManyToOne
+    @JoinColumn(name = "id", referencedColumnName = "id", nullable = false)
+    private Utilisateur utilisateurById;
 
     public Integer getIdentif() {
         return identif;

@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_note")
+    @Column(name = "id_note", insertable=false, updatable=false)
     private Integer idNote;
     @Basic
     @Column(name = "valeur")
@@ -17,6 +17,9 @@ public class Note {
     @Basic
     @Column(name = "notee")
     private Integer notee;
+    @ManyToOne
+    @JoinColumn(name = "id", referencedColumnName = "id", nullable = false)
+    private Utilisateur utilisateurByIpp;
 
     public Integer getIdNote() {
         return idNote;

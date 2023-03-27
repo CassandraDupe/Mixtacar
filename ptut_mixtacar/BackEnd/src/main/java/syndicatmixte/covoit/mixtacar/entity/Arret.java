@@ -2,11 +2,13 @@ package syndicatmixte.covoit.mixtacar.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
+
 @Entity
 public class Arret {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_arret")
+    @Column(name = "id_arret", insertable=false, updatable=false)
     private Integer idArret;
     @Basic
     @Column(name = "nom")
@@ -17,6 +19,22 @@ public class Arret {
     @Basic
     @Column(name = "lon")
     private Double lon;
+    @ManyToMany
+    @JoinTable(name = "associerArrivee",
+            joinColumns =
+                    @JoinColumn(name = "id_arret", referencedColumnName = "id_arret", nullable = false),
+            inverseJoinColumns =
+                    @JoinColumn(name = "id_arrivee", referencedColumnName = "id_arrivee", nullable = false)
+    )
+    private Collection<Circuit> circuitArrivee;
+    @ManyToMany
+    @JoinTable(name = "associerDepart",
+            joinColumns =
+            @JoinColumn(name = "id_arret", referencedColumnName = "id_arret", nullable = false),
+            inverseJoinColumns =
+            @JoinColumn(name = "id_depart", referencedColumnName = "id_depart", nullable = false)
+    )
+    private Collection<Circuit> circuitDepart;
 
     public Integer getIdArret() {
         return idArret;

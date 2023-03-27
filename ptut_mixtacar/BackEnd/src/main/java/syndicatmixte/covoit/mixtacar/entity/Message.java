@@ -8,8 +8,11 @@ import java.sql.Date;
 public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_message")
+    @Column(name = "id_message", insertable=false, updatable=false)
     private Integer idMessage;
+    @ManyToOne
+    @JoinColumn(name = "id_message", referencedColumnName = "id", nullable = false)
+    private Utilisateur utilisateurByIpp;
     @Basic
     @Column(name = "type")
     private String type;

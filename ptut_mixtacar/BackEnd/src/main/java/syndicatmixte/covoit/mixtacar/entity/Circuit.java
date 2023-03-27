@@ -3,12 +3,13 @@ package syndicatmixte.covoit.mixtacar.entity;
 import jakarta.persistence.*;
 
 import java.sql.Date;
+import java.util.Collection;
 
 @Entity
 public class Circuit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_circuit")
+    @Column(name = "id_circuit", insertable=false, updatable=false)
     private Integer idCircuit;
     @Basic
     @Column(name = "depart")
@@ -19,6 +20,28 @@ public class Circuit {
     @Basic
     @Column(name = "horaire")
     private Date horaire;
+    @OneToOne
+    @JoinColumn(name = "id_besoin", referencedColumnName = "id_besoin", nullable = false)
+    private Besoin besoinById;
+    @OneToOne
+    @JoinColumn(name = "id_trajet", referencedColumnName = "id_trajet", nullable = false)
+    private Trajet trajetById;
+    @ManyToMany
+    @JoinTable(name = "associerArrivee",
+            joinColumns =
+                @JoinColumn(name = "arrivee", referencedColumnName = "arrivee", nullable = false),
+            inverseJoinColumns =
+                @JoinColumn(name = "id_arret", referencedColumnName = "id_arret", nullable = false)
+    )
+    private Collection<Arret> arretArrivee;
+    @ManyToMany
+    @JoinTable(name = "associerDepart",
+            joinColumns =
+            @JoinColumn(name = "depart", referencedColumnName = "depart", nullable = false),
+            inverseJoinColumns =
+            @JoinColumn(name = "id_arret", referencedColumnName = "id_arret", nullable = false)
+    )
+    private Collection<Arret> arretDepart;
 
     public Integer getIdCircuit() {
         return idCircuit;

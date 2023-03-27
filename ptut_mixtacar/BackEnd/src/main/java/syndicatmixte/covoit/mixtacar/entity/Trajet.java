@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Trajet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_trajet")
+    @Column(name = "id_trajet", insertable=false, updatable=false)
     private Integer idTrajet;
     @Basic
     @Column(name = "conducteur")
@@ -14,6 +14,12 @@ public class Trajet {
     @Basic
     @Column(name = "nbplace")
     private Integer nbplace;
+    @OneToOne
+    @JoinColumn(name = "id_circuit", referencedColumnName = "id_circuit", nullable = false)
+    private Circuit circuitById;
+    @ManyToOne
+    @JoinColumn(name = "id", referencedColumnName = "id", nullable = false)
+    private Utilisateur utilisateurById;
 
     public Integer getIdTrajet() {
         return idTrajet;

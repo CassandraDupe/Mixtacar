@@ -2,11 +2,14 @@ package syndicatmixte.covoit.mixtacar.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
+import java.util.Set;
+
 @Entity
 public class Besoin {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_besoin")
+    @Column(name = "id_besoin", insertable=false, updatable=false)
     private Integer idBesoin;
     @Basic
     @Column(name = "urgent")
@@ -20,6 +23,11 @@ public class Besoin {
     @Basic
     @Column(name = "id_util")
     private Integer idUtil;
+    @ManyToOne
+    @JoinColumn(name = "id_circuit", referencedColumnName = "id_circuit", nullable = false)
+    private Circuit circuitById;
+    @OneToMany(mappedBy = "besoinsByIdtrajet")
+    private Collection<Utilisateur> utilisateurByIdbesoin;
 
     public Integer getIdBesoin() {
         return idBesoin;
@@ -87,4 +95,6 @@ public class Besoin {
         result = 31 * result + (idUtil != null ? idUtil.hashCode() : 0);
         return result;
     }
+
+
 }
