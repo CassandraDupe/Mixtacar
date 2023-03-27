@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>This is "Poposer trajet - lieux depart et arrivé" page</h1>
-  </div>
+  <p class="pt-10"> </p>
   <div id="form">
     <v-sheet width="300" class="mx-auto">
       <v-form fast-fail @submit.prevent>
@@ -15,7 +13,6 @@
     </v-sheet>
   </div>
 </template>
-
 <style scoped>
 
 </style>
