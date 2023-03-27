@@ -17,7 +17,7 @@ create table preference(
 );
 
 create table utilisateur(
-	id int not null primary key,
+	id int not null primary key AUTO_INCREMENT,
 	nom varchar(30) not null,
 	prenom varchar(30) not null,
 	adresse_mail varchar(50) not null,
